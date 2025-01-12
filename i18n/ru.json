@@ -1,0 +1,13 @@
+{
+    "mwevesso-admin-callback-url-label": "URL-адрес обратного вызова для EVE SSO:",
+    "mwevesso-admin-show-wgoauth2client-label": "Дамп конфигурации:",
+    "mwevesso-error": "'''Ошибка''':$1",
+    "mwevesso-log-in-with-eve-online": "Войти через Eve Online",
+    "mwevesso-login-header": "Вход $1",
+    "mwevesso-login-with-oauth2": "[[$1|Войти через $2]]",
+    "mwevesso-oauth-login": "Войти через EVE SSO",
+    "mwevesso-persist": "Сохранить вход через Eve SSO (Необходимо выйти и войти снова, чтобы изменения вступили в силу)",
+    "mwevesso-you-can-login-to-this-wiki-with-oauth2": "Вы можете войти в эту вики, используя свою учетную запись $1",
+    "mwevesso-youre-already-loggedin": "Вы уже вошли в систему.",
+    "oauth2client": "MediaWiki EVE SSO"
+}

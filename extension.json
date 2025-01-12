@@ -1,47 +1,74 @@
 {
-	"name": "MW-EVE-SSO",
-	"version": "0.1",
-	"author": [
-		"[http://dekeijzer.org Joost de Keijzer]",
-		"[https://www.mediawiki.org/wiki/User:Nischayn22 Nischay Nahata]",
-		"[https://star-made.org Schine GmbH]",
-		"[https://github.com/mostertb Brad Mostert]",
-		"[https://github.com/Yeeshani Yeeshani]"
-	],
-	"url": "https://www.mediawiki.org/wiki/Extension:OAuth2_Client",
-	"descriptionmsg": "oauth2client-act-as-a-client-to-eve-online-sso",
-	"license-name": "LGPL-3.0",
-	"type": "other",
-	"AutoloadClasses": {
-		"OAuth2ClientHooks": "includes/OAuth2Client.php",
-		"SpecialOAuth2Client": "includes/SpecialOAuth2Client.php",
-		"EveOnlineSSOProvider": "includes/EveOnlineSSOProvider.php",
-		"EveOnlineSSOResourceOwner": "includes/EveOnlineSSOResourceOwner.php"
-	},
-	"ExtensionMessagesFiles": {
-		"OAuth2ClientAlias": "includes/OAuth2Client.alias.php"
-	},
-	"Hooks": {
-		"SkinTemplateNavigation::Universal": [
-			"OAuth2ClientHooks::onSkinTemplateNavigationUniversal"
-		],
-		"GetPreferences":[
-			"OAuth2ClientHooks::onGetPreferences"
-		],
-		"SecuritySensitiveOperationStatus":[
-			"OAuth2ClientHooks::onSecuritySensitiveOperationStatus"
-		],
-		"AuthChangeFormFields":[
-			"OAuth2ClientHooks::onAuthChangeFormFields"
-		]
-	},
-	"SpecialPages": {
-		"OAuth2Client": "SpecialOAuth2Client"
-	},
-	"MessagesDirs": {
-		"MyExtension": [
-			"i18n"
-		]
-	},
-	"manifest_version": 1
+    "name": "MW-EVE-SSO",
+    "version": "1.0.0beta",
+    "author": [
+        "[http://dekeijzer.org Joost de Keijzer]",
+        "[https://www.mediawiki.org/wiki/User:Nischayn22 Nischay Nahata]",
+        "[https://star-made.org Schine GmbH]",
+        "[https://github.com/mostertb Brad Mostert]",
+        "[https://github.com/Yeeshani Yeeshani]"
+    ],
+    "url": "https://www.mediawiki.org/wiki/Extension:OAuth2_Client",
+    "descriptionmsg": "mwevesso-act-as-a-client-to-eve-online-sso",
+    "license-name": "LGPL-3.0",
+    "type": "other",
+    "AutoloadNamespaces": {
+        "MediaWiki\\Extension\\MWEVESSO\\": "src/"
+    },
+    "ExtensionMessagesFiles": {
+        "OAuth2ClientAlias": "includes/OAuth2Client.alias.php"
+    },
+    "Hooks": {
+        "SkinTemplateNavigation::Universal": "main",
+        "GetPreferences": "main",
+        "SecuritySensitiveOperationStatus": "main",
+        "AuthChangeFormFields": "main"
+    },
+    "HookHandlers": {
+        "main": {
+            "class": "MediaWiki\\Extension\\MWEVESSO\\OAuth2ClientHooks"
+        }
+    },
+    "SpecialPages": {
+        "OAuth2Client": "MediaWiki\\Extension\\MWEVESSO\\SpecialOAuth2Client"
+    },
+    "ResourceModules": {
+        "mw.evesso.modal": {
+            "scripts": ["mw.evesso.modal.js"],
+            "dependencies": ["mediawiki.util"]
+        },
+        "mw.evesso.login-white": {
+            "styles": ["mw.evesso.login-white.css"]
+        },
+        "mw.evesso.login-black": {
+            "styles": ["mw.evesso.login-black.css"]
+        }
+    },
+    "ResourceFileModulePaths": {
+        "localBasePath": "modules",
+        "remoteExtPath": "MW-EVE-SSO/modules"
+    },
+    "MessagesDirs": {
+        "MyExtension": ["i18n"]
+    },
+    "config": {
+        "OAuth2Client": {
+            "value": {
+                "client": {
+                    "id": "",
+                    "secret": ""
+                },
+                "configuration": {
+                    "allowed_alliance_ids": [],
+                    "allowed_character_ids": [],
+                    "allowed_corporation_ids": [],
+                    "replace_user_menu": false,
+                    "theme": "black",
+                    "modal": false
+                }
+            },
+            "merge_strategy": "array_plus_2d"
+        }
+    },
+    "manifest_version": 2
 }

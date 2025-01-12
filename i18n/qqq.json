@@ -1,9 +1,13 @@
 {
-	"oauth2client": "Link of the special page",
-	"oauth2client-login-header": "OAuth2 Login",
-	"oauth2client-you-can-register-to-this-wiki-using-oauth2": "Explain to user that OAuth2 link is available",
-	"oauth2client-login-with-oauth2": "link text",
-	"oauth2client-youre-already-loggedin": "Message displayed on the default specialpage. tietoaccount replacement.",
-	"oauth2client-act-as-a-client-to-any-oauth2-server": "Description of the extension, see setup file",
-	"oauth2client-couldnotconnect": "Message for user when OAuth2 server is unavailable"
+    "mwevesso-admin-callback-url-label": "The callback URL for the EVE SSO:",
+    "mwevesso-admin-show-wgoauth2client-label": "Configuration dump:",
+    "mwevesso-error": "'''Error''':$1",
+    "mwevesso-log-in-with-eve-online": "Log in with Eve Online",
+    "mwevesso-login-header": "$1 login",
+    "mwevesso-login-with-oauth2": "[[$1|Login with $2]]",
+    "mwevesso-oauth-login": "Log in with the EVE SSO",
+    "mwevesso-persist": "Keep Eve SSO logged in (You need to log out and back in for a change to take effect)",
+    "mwevesso-you-can-login-to-this-wiki-with-oauth2": "You can login this wiki with your $1 account",
+    "mwevesso-youre-already-loggedin": "You're already logged in.",
+    "oauth2client": "MediaWiki EVE SSO"
 }

@@ -1,0 +1,21 @@
+.mwevesso-login-wrap > a {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    text-indent: -9999px;
+    overflow: hidden;
+    border: none;
+}
+
+li.mwevesso-login-wrap > a {
+    width: 195px;
+    height: 30px;
+    background-image: url("../images/eve-sso-login-black-small.png");
+}
+
+div.mwevesso-login-wrap > a {
+    width: 270px;
+    height: 45px;
+    background-image: url("../images/eve-sso-login-black-large.png");
+}

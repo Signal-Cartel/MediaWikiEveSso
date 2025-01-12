@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Aliases for Special:OAuth2Client
  *
@@ -6,14 +7,19 @@
  * @ingroup Extensions
  */
 
-$specialPageAliases = array();
+$specialPageAliases = [];
 
 /** English (English) */
-$specialPageAliases['en'] = array(
-	'OAuth2Client' => array( 'OAuth2Client' ),
-);
+$specialPageAliases['en'] = [
+    'OAuth2Client' => ['OAuth2Client'],
+];
+
+/** Russian */
+$specialPageAliases['ru'] = [
+    'OAuth2Client' => ['OAuth2Client'],
+];
 
 /** Dutch (Nederlands) */
-$specialPageAliases['nl'] = array(
-	'OAuth2Client' => array( 'OAuth2Client' ),
-);
+$specialPageAliases['nl'] = [
+    'OAuth2Client' => ['OAuth2Client'],
+];
