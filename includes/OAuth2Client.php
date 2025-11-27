@@ -19,6 +19,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 }
 
 use MediaWiki\Auth\AuthManager;
+use MediaWiki\Title\Title;
 
 class OAuth2ClientHooks {
 
