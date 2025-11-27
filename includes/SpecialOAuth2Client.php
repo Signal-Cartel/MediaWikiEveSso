@@ -19,6 +19,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 }
 
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Title\Title;
 
 class SpecialOAuth2Client extends SpecialPage {
 
@@ -227,3 +228,4 @@ class SpecialOAuth2Client extends SpecialPage {
 	}
 
 }
+
